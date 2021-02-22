@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Paytone+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Paytone One', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(31, 31, 31);
+}
+
+.container {
+    position: relative;
+}
+
+.container h2 {
+    position: absolute;
+    font-size: 8em;
+    transform: translate(-50%, -50%);
+}
+
+.container h2:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(87, 87, 248);
+}
+ 
+.container h2:nth-child(2) {
+    color: rgb(87, 87, 248);
+    animation: anim 4s ease-in-out infinite;
+}
+
+@keyframes anim {
+    0%, 100% {
+        clip-path: polygon(0% 57%, 7% 63%, 16% 68%, 24% 69%, 36% 70%, 
+        47% 68%, 56% 62%, 63% 55%, 71% 49%, 79% 43%, 87% 40%, 95% 39%, 
+        100% 39%, 100% 100%, 0% 100%);
+    }
+
+    50% {
+        clip-path: polygon(0% 57%, 7% 53%, 15% 48%, 26% 44%, 36% 48%, 
+        43% 54%, 50% 59%, 60% 64%, 70% 66%, 81% 65%, 90% 62%, 95% 39%, 
+        100% 50%, 100% 100%, 0% 100%);
+    }
+}
