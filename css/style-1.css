@@ -1,0 +1,41 @@
+/*Default style for body*/
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(105, 105, 105);
+}
+
+a {
+    display: block;
+    position: relative;
+    font-size: 50px;
+    margin: 0 20px;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    line-height: 100px;
+    transition: .4s linear;
+    color: brown;
+    box-shadow: 2px 2px 2px brown;
+}
+
+a:hover {
+    animation: text-pop-up-top .5s cubic-bezier(.250, .460, .450, .940) both;
+}
+
+@keyframes text-pop-up-top {
+    0% {
+        transform: translateY(0);
+        transform-origin: 50% 50%;
+    }
+
+    100% {
+        transform: translateY(-50px);
+        transform-origin: 50% 50%;
+    }
+}
